@@ -115,3 +115,14 @@
     @apply bg-background text-foreground;
   }
 }
+body::-webkit-scrollbar {
+  width: 0px; /* Hide the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: transparent; /* Make the thumb invisible */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent; /* Make the track invisible */
+}

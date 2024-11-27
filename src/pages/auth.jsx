@@ -19,11 +19,11 @@ const Auth = () => {
   }, [isAuthenticated, loading])
 
   return (
-    <div className=" text-[#b3d5ba] min-h-screen flex flex-col items-center justify-center bg-[#020817]">
+    <div className="container max-w-[90%] mx-auto text-[#b3d5ba] min-h-fit mt-10 flex flex-col items-center justify-center bg-[#020817]">
         <h1 className="text-5xl font-extrabold text-center mb-6">
           {searchParams.get("createNew") ? "Hold up! Let's login first" : "Login/Signup"}
         </h1>
-        <Tabs defaultValue="Login" className="w-[400px]">
+        <Tabs defaultValue="Login" className="w-[90%]">
           <TabsList className="grid grid-cols-2 w-full">
             <TabsTrigger value="Login">Login</TabsTrigger>
             <TabsTrigger value="SignUp">Sign Up</TabsTrigger>

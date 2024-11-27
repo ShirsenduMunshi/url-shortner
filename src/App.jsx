@@ -12,6 +12,7 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/Notfound";
 function App() {
   const router = createBrowserRouter([
     {
@@ -57,6 +58,10 @@ function App() {
         {
           path: "/contact",
           element: <Contact />,
+        },
+        {
+          path: "*",
+          element: <NotFound />,
         },
       ]
     }
