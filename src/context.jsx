@@ -1,26 +1,3 @@
-// import { useContext, useEffect } from "react"
-// import useFetch from "./hooks/use-fetch";
-// import { getCurrentUser } from "./db/apiAuth";
-
-// const UrlContext = useContext();
-
-// const UrlProvider = ({children})=>{
-//     const {data, loading, fn: fetchUser} = useFetch(getCurrentUser)
-
-//     const isAuthenticated = user?.role === "authenticated";
-//     useEffect(() => {
-//       fetchUser();
-//     }, []);
-    
-//     return <UrlContext.Provider value={{user, fetchUser, isAuthenticated, loading}}>
-//         {children}
-//     </UrlContext.Provider>
-// };
-// export const UrlState = ()=>{
-//     return useContext(UrlContext);
-// }
-// export default UrlProvider;
-
 import React, { createContext, useContext, useEffect, useState } from "react";
 import useFetch from "./hooks/use-fetch";
 import { getCurrentUser } from "./db/apiAuth";

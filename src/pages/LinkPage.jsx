@@ -191,7 +191,7 @@ const LinkPage = () => {
   const {
     loading: loadingStats,
     data: stats,
-    fn: fetchStats,
+    fn: fnStats,
   } = useFetch(getClicksForUrls, id);
 
   const { loading: loadingDelete, fn: deleteFn } = useFetch(deleteUrl, id);
@@ -204,7 +204,7 @@ const LinkPage = () => {
   // Fetch stats after URL data is fetched
   useEffect(() => {
     if (!error && !loading) {
-      fetchStats();
+      fnStats();
     }
   }, [loading, error]);
 
@@ -243,9 +243,9 @@ const LinkPage = () => {
           {shortLink ? (
             <a href={`${BASE_URL}/${shortLink}`} target="_blank"rel="noopener noreferrer" className="text-3xl sm:text-4xl text-blue-400 font-bold hover:underline cursor-pointer">
               {`${BASE_URL}/${shortLink}`}
-              {console.log("Short Url: ",shortLink)}
+              {/* {console.log("Short Url: ",shortLink)}
               {console.log("Base Url: ",BASE_URL)}
-              {console.log("Full Link: ",BASE_URL + "/" + shortLink)}
+              {console.log("Full Link: ",BASE_URL + "/" + shortLink)} */}
             </a>
           ) : (
             <p className="text-red-500">Short link is not available</p>
